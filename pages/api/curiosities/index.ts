@@ -8,7 +8,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
         const productsCount = await prisma.curiosities.count();
         const skip = Math.floor(Math.random() * productsCount);
         const cur = await prisma.curiosities.findMany({
-            take: 5,
+            take: 1,
             skip: skip,
         });
 
