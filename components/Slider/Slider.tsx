@@ -1,39 +1,19 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
-import 'swiper/css/pagination';
-import 'swiper/css';
-import { Box } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { Box, CircularProgress, Stack, Card } from '@mui/material';
+import { useCuriosities } from '../../services';
 
 const Slider = () => {
-	const [quotes, setQuotes] = useState([{ text: '' }]);
-	const getData = async () => {
-		const response = await fetch('/api/curiosities', {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		});
-		const data = await response.json();
-		console.log(data);
-		setQuotes(data);
-		return data;
-	};
-
-	useEffect(() => {
-		getData();
-	}, []);
+	const { data, isLoading } = useCuriosities();
 
 	return (
-		<Box color="black" mx="auto" borderRadius={3} py={5} px={2} width="80vw">
-			<Swiper pagination={true} modules={[Pagination]} className="mySwiper" loop={true} slidesPerView={1}>
-				{quotes.map((quote) => (
-					<Box>
-						<SwiperSlide>{quote.text}</SwiperSlide>
-					</Box>
-				))}
-			</Swiper>
-		</Box>
+		<Stack mx="auto" p={4} width="80vw" textAlign="center" boxShadow={3} borderRadius={2}>
+			{isLoading || !data ? (
+				<div>
+					<CircularProgress />
+				</div>
+			) : (
+				<Box>{data.text}</Box>
+			)}
+		</Stack>
 	);
 };
 

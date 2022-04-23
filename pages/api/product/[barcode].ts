@@ -6,7 +6,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
 	//get selected
 	.get(async (req, res) => {
 		const { barcode } = req.query;
-		const result = await prisma.products.findFirst({ where: { barcode: String(  barcode ) } });
+		const result = await prisma.products.findUnique({ where: { barcode: String(barcode) } });
 		res.json(result);
 	})
 	//update product
