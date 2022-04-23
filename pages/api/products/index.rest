@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/products
+
+###
+
+#POST http://localhost:3000/api/products
+#Content-Type:application/json
+
+#{
+#  "name": "Coca-Cola 330ml",
+#  "barcode": "5449000000996",
+#  "harmfulness": 40,
+#  "categoriesId": 2
+#}
