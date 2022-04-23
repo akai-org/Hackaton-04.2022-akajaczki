@@ -1,0 +1,22 @@
+POST http://localhost:3000/api/categories
+Content-Type:application/json
+
+{
+  "name": "Napoje"
+}
+
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Coca-Cola 330ml",
+  "barcode": "5449000000996",
+  "harmfulness": 25,
+  "categoriesId": 1,
+  "co_usage": "1 kg",
+  "water_usage": "0,4 kg",
+  "box_usage": "bardzo dobra"
+}
