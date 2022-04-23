@@ -1,8 +1,64 @@
-POST http://localhost:3000/api/categories
+#POST http://localhost:3000/api/categories
+#Content-Type:application/json
+
+#{
+#  "name": "Napoje"
+#}
+
+
+###
+
+#POST http://localhost:3000/api/categories
+#Content-Type:application/json
+
+#{
+#  "name": "Spożywcze"
+#}
+
+###
+
+#POST http://localhost:3000/api/products
+#Content-Type:application/json
+#
+#{
+#  "name": "Coca-Cola 330ml",
+#  "barcode": "5449000000996",
+#  "harmfulness": 25,
+#  "categoriesId": 1,
+#  "co_usage": "1 kg",
+#  "water_usage": "0,4 kg",
+#  "box_usage": "bardzo dobra"
+#}
+
+
+###
+
+#POST http://localhost:3000/api/products
+#Content-Type:application/json
+#
+#{
+#  "name": "Oshee Vitamin 555ml",
+#  "barcode": "5908260253790",
+#  "harmfulness": 50,
+#  "categoriesId": 1,
+#  "co_usage": "0.5 kg",
+#  "water_usage": "0.6 kg",
+#  "box_usage": "dobra"
+#}
+
+###
+
+POST http://localhost:3000/api/products
 Content-Type:application/json
 
 {
-  "name": "Napoje"
+  "name": "Oshee Vitamin 555ml",
+  "barcode": "5908260253790",
+  "harmfulness": 0,
+  "categoriesId": 1,
+  "co_usage": "0.75 kilogramów [kg]",
+  "water_usage": "0.555 litra [l]",
+  "box_usage": "dobry"
 }
 
 
@@ -12,11 +68,181 @@ POST http://localhost:3000/api/products
 Content-Type:application/json
 
 {
-  "name": "Coca-Cola 330ml",
+  "name": "Coca Cola 330ml",
   "barcode": "5449000000996",
-  "harmfulness": 25,
+  "harmfulness": 20,
   "categoriesId": 1,
-  "co_usage": "1 kg",
-  "water_usage": "0,4 kg",
-  "box_usage": "bardzo dobra"
+  "co_usage": "0.5 kilograma [kg]",
+  "water_usage": "0.4 litra [l]",
+  "box_usage": "bardzo dobry"
 }
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Wino 1l",
+  "barcode": "1234567891234",
+  "harmfulness": 80,
+  "categoriesId": 1,
+  "co_usage": "0.75 kilogramów [kg]",
+  "water_usage": "514 litrów [l]",
+  "box_usage": "bardzo dobry"
+}
+
+
+
+###
+
+
+
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Mięso wołowe 1kg",
+  "barcode": "987654321123",
+  "harmfulness": 100,
+  "categoriesId": 2,
+  "co_usage": "221000 kilogramów [kg]",
+  "water_usage": "15 tysięcy litrów [l]",
+  "box_usage": "dobra"
+}
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Jajka 10 sztuk",
+  "barcode": "98764379375",
+  "harmfulness": 40,
+  "categoriesId": 2,
+  "co_usage": "1.8 kilogramów [kg]",
+  "water_usage": "2360 litrów [l]",
+  "box_usage": "bardzo dobry"
+}
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Groch 1kg",
+  "barcode": "123456079375",
+  "harmfulness": 10,
+  "categoriesId": 2,
+  "co_usage": "0.183 kilogramów [kg]",
+  "water_usage": "595 litrów [l]",
+  "box_usage": "dobry"
+}
+
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Ślad węglowy to całkowita emisja gazów cieplarnianych spowodowana bezpośrednio i pośrednio przez osobę, organizację, wydarzenie lub produkt”. Oblicza się ją, sumując emisje wynikające z każdego etapu życia produktu lub usługi (produkcja materiału, wytwarzanie, użytkowanie i koniec życia)"
+}
+
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Przez cały cykl życia produktu mogą być emitowane różne gazy cieplarniane, takie jak dwutlenek węgla, metan i podtlenek azotu, każdy z większą lub mniejszą zdolnością do zatrzymywania ciepła w atmosfera."
+}
+
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Ślad węglowy to całkowita emisja gazów cieplarnianych spowodowana bezpośrednio i pośrednio przez osobę, organizację, wydarzenie lub produkt”. Oblicza się ją, sumując emisje wynikające z każdego etapu życia produktu lub usługi (produkcja materiału, wytwarzanie, użytkowanie i koniec życia)"
+}
+
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Żywność odpowiada za 10-30% śladu węglowego gospodarstwa domowego, zazwyczaj większa część w gospodarstwach o niższych dochodach. Ich produkcja odpowiada za 68% emisji, a transport za 5%."
+}
+
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Produkty mięsne mają większy ślad węglowy na kalorię niż zboża czy warzywa. Spowodowane jest to faktem, że zwierzęta, takie jak bydło, owce i kozy, produkują dużo metanu."
+}
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Sektor cyfrowy był już odpowiedzialny za 3,3% globalnych emisji gazów cieplarnianych w 2017 r., znacznie powyżej lotnictwa cywilnego, często postrzeganego jako jeden z największych emitentów gazów cieplarnianych."
+}
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Faza produkcji smartfona stanowi 90% bezpośredniego zużycia energii smartfona w całym jego cyklu życia. Zatem im częściej kupujemy nowy, tym bardziej jest on kosztowny dla środowiska."
+}
+
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Szacuje się, że 10 miliardów e-maili jest wymienianych co godzinę, a każdy e-mail emituje co najmniej 4g CO2.  W sumie globalny ruch e-mail jest napędzany przez równowartość 15 elektrowni jądrowych."
+}
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Produkty mleczne, takie jak ser i jogurt, odpowiadają za prawie 19% emitowanych gazów cieplarnianych. Gorzej m.in. niż drób, jajka, które stanowią zaledwie 14% gazów cieplarnianych, a tymczasem warzywa stanowią zaledwie 4,9%."
+}
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Zaprogramuj komputer tak, aby przechodził w tryb uśpienia po kilku minutach braku aktywności. Pamiętaj, żeby wyłączyć komputer, kiedy wychodzisz."
+}
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Postaraj się wysyłać linki, a nie załączniki. Wysyłaj duże załączniki za pośrednictwem platform do przesyłania plików, a nie e-maili."
+}
+
+
+###
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Średnio jedno amerykańskie gospodarstwo domowe emituje rocznie 8,1 ton CO2 tylko poprzez konsumpcję żywności. Produkcja żywności odpowiada za 83% emisji, a jej transport za 11%."
+}
+
+
