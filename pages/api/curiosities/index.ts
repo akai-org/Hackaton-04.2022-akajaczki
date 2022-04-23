@@ -3,7 +3,13 @@ import nc from 'next-connect';
 import { prisma } from '@/prisma';
 
 const handler = nc<NextApiRequest, NextApiResponse>()
-    .get(async (req, res) => {
+	.get(async (req, res) => {
+		const productsCount = await prisma.curiosities.count();
+		const skip = Math.floor(Math.random() * productsCount);
+		const cur = await prisma.curiosities.findMany({
+			take: 5,
+			skip: skip,
+		});
 
         const productsCount = await prisma.curiosities.count();
         const skip = Math.floor(Math.random() * productsCount);
@@ -12,15 +18,10 @@ const handler = nc<NextApiRequest, NextApiResponse>()
             skip: skip,
         });
 
-        res.json(cur);
 
-    })
-    .post(async (req, res) => {
-        const { text } = req.body;
+		const result = await prisma.curiosities.create({ data: { text } });
 
-        const result = await prisma.curiosities.create({ data: { text } });
-
-        res.json(result);
-    });
+		res.json(result);
+	});
 
 export default handler;
