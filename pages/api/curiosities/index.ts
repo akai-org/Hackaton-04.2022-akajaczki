@@ -11,10 +11,13 @@ const handler = nc<NextApiRequest, NextApiResponse>()
 			skip: skip,
 		});
 
-		res.json(cur);
-	})
-	.post(async (req, res) => {
-		const { text } = req.body;
+        const productsCount = await prisma.curiosities.count();
+        const skip = Math.floor(Math.random() * productsCount);
+        const cur = await prisma.curiosities.findMany({
+            take: 1,
+            skip: skip,
+        });
+
 
 		const result = await prisma.curiosities.create({ data: { text } });
 
