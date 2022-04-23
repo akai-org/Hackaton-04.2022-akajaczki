@@ -20,3 +20,20 @@ Content-Type:application/json
   "water_usage": "0,4 kg",
   "box_usage": "bardzo dobra"
 }
+
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type:application/json
+
+{
+  "name": "Oshee Vitamin 555ml",
+  "barcode": "5908260253790",
+  "harmfulness": 50,
+  "categoriesId": 1,
+  "co_usage": "0.5 kg",
+  "water_usage": "0.6 kg",
+  "box_usage": "dobra"
+}
+
