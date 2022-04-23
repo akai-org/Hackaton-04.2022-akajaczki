@@ -35,3 +35,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+/.env
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/jsLibraryMappings.xml
+/.idea/Hackaton-04.2022-akajaczki.iml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
