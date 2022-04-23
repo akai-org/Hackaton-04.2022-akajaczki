@@ -12,10 +12,11 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     //update product
     .put(async (req, res) => {
         const {id} = req.query;
-        const {name, barcode, harmfulness, categoriesId} = req.body;
+        const {name, barcode, harmfulness, categoriesId, co_usage, water_usage, box_usage} = req.body;
+        // @ts-ignore
         const result = await prisma.products.update({
             where: {id: Number(id)},
-            data: {name, barcode, harmfulness, categoriesId}
+            data: {name, barcode, harmfulness, categoriesId, co_usage, water_usage, box_usage}
         })
         res.json(result);
     })

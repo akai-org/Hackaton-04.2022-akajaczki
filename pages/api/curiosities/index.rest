@@ -1,7 +1,10 @@
 GET http://localhost:3000/api/curiosities
-#POST http://localhost:3000/api/curiosities
-#Content-Type:application/json
 
-#{
-#  "text": "Ślad węglowy to całkowita emisja gazów cieplarnianych spowodowana bezpośrednio i pośrednio przez osobę, organizację, wydarzenie lub produkt”. Oblicza się ją, sumując emisje wynikające z każdego etapu życia produktu lub usługi (produkcja materiału, wytwarzanie, użytkowanie i koniec życia)"
-#}
+###
+
+POST http://localhost:3000/api/curiosities
+Content-Type:application/json
+
+{
+  "text": "Ślad węglowy to całkowita emisja gazów cieplarnianych spowodowana bezpośrednio i pośrednio przez osobę, organizację, wydarzenie lub produkt”. Oblicza się ją, sumując emisje wynikające z każdego etapu życia produktu lub usługi (produkcja materiału, wytwarzanie, użytkowanie i koniec życia)"
+}
